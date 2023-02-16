@@ -24,10 +24,9 @@ function love.load()
     if data then 
         Funcs.set_game_tiles(data.tiles)
         current_score = data.current_score
-        total_score = data.total_score
+        best_score = data.best_score
     else 
         Funcs.start_new_game(BASE_VALUES) 
-        Data.save_data(tiles, current_score, best_score)
     end
 
     current_score_label = {
