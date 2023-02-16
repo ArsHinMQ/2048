@@ -1,3 +1,5 @@
+Data = require('db/data')
+
 local funcs = {}
 
 function already_merged(paired_tiles, target_tile)
@@ -63,6 +65,7 @@ function funcs.start_new_game()
     current_score = 0
     funcs.generate_new_tile()
     funcs.generate_new_tile()
+    Data.save_data(tiles, current_score, best_score)
 end
 
 
